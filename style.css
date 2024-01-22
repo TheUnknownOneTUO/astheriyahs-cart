@@ -277,31 +277,31 @@ th {
 
 /*Background Images*/
 #codmCListing {
-  background-image: url('/assets/backgrounds/codmBackground1.png');
+  background-image: url('assets/backgrounds/codmBackground1.png');
 }
 #wrCListing {
-  background-image: url("/assets/backgrounds/wrBackground1.png")
+  background-image: url("assets/backgrounds/wrBackground1.png")
 }
 #giCListing {
-  background-image: url("/assets/backgrounds/giBackground1.png");
+  background-image: url("assets/backgrounds/giBackground1.png");
 }
 #pubgCListing {
-  background-image: url("/assets/backgrounds/pubgBackground1.png");
+  background-image: url("assets/backgrounds/pubgBackground1.png");
 }
 #mlCListing {
-  background-image: url("/assets/backgrounds/mlBackground1.png");
+  background-image: url("assets/backgrounds/mlBackground1.png");
 }
 #smCListing {
-  background-image: url("/assets/backgrounds/smBackground1.png");
+  background-image: url("assets/backgrounds/smBackground1.png");
 }
 #flCListing {
-  background-image: url("/assets/backgrounds/flBackground1.png");
+  background-image: url("assets/backgrounds/flBackground1.png");
 }
 #valCListing {
-  background-image: url("/assets/backgrounds/valBackground1.png");
+  background-image: url("assets/backgrounds/valBackground1.png");
 }
 #lolCListing {
-  background-image: url("/assets/backgrounds/lolBackground1.png");
+  background-image: url("assets/backgrounds/lolBackground1.png");
 }
 #smartListing {
   background-image: linear-gradient(to bottom right, #60bb46, #66bce1);
