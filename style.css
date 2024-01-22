@@ -1,0 +1,691 @@
+/* TOP PART */
+
+#divLogoHead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: solid 1px lavender;
+  margin: 0px;
+  padding: 0 10px 0 10px;
+  border-radius: 10px 30px 10px 30px;
+  background-image: linear-gradient(to bottom right, #3e5975, #351447);
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+}
+
+#pageTitle {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+ text-align: center;
+ color: lavender;
+ background-image: linear-gradient(to bottom right, #3e5975, #351447);
+ font-family: 'Arial';
+}
+
+#welcome {
+  font-family: 'Arial';
+  font-size: 12px;
+}
+
+#question {
+  font-weight: bold;
+  font-family: 'Courier New';
+}
+
+a {
+  color: white;
+  opacity: 0.7;
+}
+
+.navigationTab {
+background-color: #8EACCD;
+padding: 1px;
+border-radius: 20px;
+margin: 10px 5px 20px 10px;
+}
+
+.navButton.toggled {
+  border: solid 1px #351447;
+  font-weight: bold;
+  color: #351447;
+}
+
+.navButton {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 3px 20px 3px 20px;
+  border: 0px;
+  background-color: lavender;
+}
+
+/* TERMS AND CONDITIONS */
+
+#tacParent {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+#tac {
+  width: 325px;
+  height: 80vh;
+  color: #351447;
+  background-image: linear-gradient(to top, #8EACCD, white);
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  border: solid 2px white;
+  overflow-y: auto;
+}
+
+#terms {
+  text-align: left;
+}
+
+#tacButton {
+  margin-bottom: 10px;
+}
+
+/* MIDDLE PART */
+
+.categoryButton {
+  background-image: linear-gradient(to bottom right, #6D71BC, #A0CCE3);
+  border-radius: 30px;
+  border: solid 2px white;
+  margin: 10px 10px 0px 10px;
+}
+
+.categoryInline {
+  display: inline-block;
+}
+
+.mainDivButton {
+  font-family: 'Courier New';
+  font-weight: bold;
+  border: solid 3px white;
+  border-radius: 10px;
+}
+
+#divHome {
+  margin-bottom: 60px;
+}
+
+.isHidden {
+  display: none !important;
+}
+
+#gamePanel, #networkPanel{
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+  display: flex;
+}
+
+#gamePanel button, #networkPanel button {
+  font-family: 'Courier New';
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagePanel {
+  height: 150px;
+  width: 150px;
+  border: solid lightgray;
+}
+
+#bpPanel {
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 20px;
+  overscroll-behavior: contain;
+}
+
+.bpInfo {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #fbff80, #a88428);
+  border-radius: 10px;
+  width: 320px;
+  padding: 5px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.bpInfo p {
+  color: #351447;
+  margin: 0;
+}
+
+.bpInfo h3 {
+  color: #351447;
+  margin: 0;
+}
+
+.subInfoDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.subInfoDiv button {
+  width: 100px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 20px 5px 20px 5px;
+  background-color: rgba(0, 200, 200, 0.3);
+}
+
+/* BOTTOM PART */
+
+.dash {
+  border-style: dashed;
+}
+
+#myCart {
+  margin: 20px 0 5px 0;
+  background-image: linear-gradient(to bottom left, #e05a5a, #edd882);
+  color: #351447;
+  font-family: 'Courier New';
+  border-radius: 10px;
+  border: dotted 3px lavender;
+}
+
+.flexTable {
+  display: flex;
+  justify-content: center;
+}
+
+#productCell {
+  width: 300px;
+}
+
+#priceCell {
+  width: 100px;
+}
+
+td, th {
+  border: solid;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.hint {
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin-top: 5px;
+}
+
+#myCart {
+  padding: 10px;
+}
+
+#myCart table {
+  margin-bottom: 10px;
+}
+
+.editHidden {
+  border: 0px;
+}
+
+.buttonRemoveToCart {
+  font-family: 'Arial';
+  font-size: bold;
+  background-color: rgba(255, 0, 0, 0.3);
+  border: solid 1px #351447;
+  border-radius: 2px;
+}
+
+#removeAllBtn {
+  font-size: 10px;
+  padding: 3px 4px 3px 4px;
+}
+
+/*Background Images*/
+#codmCListing {
+  background-image: url('/assets/backgrounds/codmBackground1.png');
+}
+#wrCListing {
+  background-image: url("/assets/backgrounds/wrBackground1.png")
+}
+#giCListing {
+  background-image: url("/assets/backgrounds/giBackground1.png");
+}
+#pubgCListing {
+  background-image: url("/assets/backgrounds/pubgBackground1.png");
+}
+#mlCListing {
+  background-image: url("/assets/backgrounds/mlBackground1.png");
+}
+#smCListing {
+  background-image: url("/assets/backgrounds/smBackground1.png");
+}
+#flCListing {
+  background-image: url("/assets/backgrounds/flBackground1.png");
+}
+#valCListing {
+  background-image: url("/assets/backgrounds/valBackground1.png");
+}
+#lolCListing {
+  background-image: url("/assets/backgrounds/lolBackground1.png");
+}
+#smartListing {
+  background-image: linear-gradient(to bottom right, #60bb46, #66bce1);
+}
+#tntListing {
+  background-image: linear-gradient(to bottom right, #ef6726, #dcdf86);
+}
+#globeListing {
+  background-image: linear-gradient(to bottom right, #1d448e, #8cacd4);
+}
+#tmListing {
+  background-image: linear-gradient(to bottom right, #e3241b,  #0b44bb);
+}
+#steamListing {
+  background-image: linear-gradient(to bottom right, #04163f,  #003e75);
+}
+
+.listingDesign {
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 50px 0 20px 0;
+  height: 400px;
+}
+
+.listingDesign p {
+  font-family: 'Courier New';
+  margin: 0;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.listingTable {
+  height: 600px;
+  overflow-y: auto;
+}
+
+.listingDesign table {
+  border-spacing: 5px 20px;
+  font-family: 'Courier New';
+  font-weight: bold;
+}
+
+.listingDesign button {
+  padding: 10px 5px 10px 5px;
+  border-radius: 15px 5px 5px 8px;
+  font-family: 'Courier New';
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 100%;
+}
+
+.listingDesign .listProduct, .col1 {
+  width: 300px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 25px 0 0 10px;
+}
+
+.listingDesign .listPrice, .col2 {
+  width: 100px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 0 10px 25px 0;
+  background-color: rgba(0, 50, 0, 0.6);
+}
+
+.listingDesign .listingBackBtn {
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+}
+
+/* POP-UP */
+
+#cartPromptParent {
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#cartPrompt {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 130px;
+  width: 100%;
+  position: fixed;
+  bottom: 40vh;
+}
+
+#cartPrompt img {
+  height: 100px;
+  width: 100px;
+}
+
+#cartPrompt p {
+  position: fixed;
+  left: 0;
+  right: 0;
+  font-family: "Courier New";
+  font-weight: bold;
+}
+
+/* FOR FORMS */
+
+.parent {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+#formsContainer, .qrChild {
+  background-image: linear-gradient(to bottom left, #e05a5a, #edd882);
+  padding: 0 0 0 0;
+  width: 250px;
+  color: #351447;
+  font-family: 'Arial';
+  border-radius: 20px;
+  border: solid 2px white;
+}
+
+#containerHeader {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  border-radius: 20px 20px 0 0;
+}
+
+.formsHeader {
+  margin: 0
+}
+
+.productForm p {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.productForm a {
+  color: blue;
+}
+
+#detailsPart p, #qrParent p {
+  margin: 0;
+}
+
+#detailsPart #timeDate {
+  margin-bottom: 1em;
+}
+
+.qrChild {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.gCash {
+  font-weight: bold;
+  color: blue;
+}
+
+#afterPayment {
+  padding: 10px;
+  font-size: 13px;
+}
+
+.maya {
+  font-weight: bold;
+  color: green;
+}
+
+#btnForPayNow {
+  background-color: seagreen;
+}
+
+#lastIns {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+#lastInsContainer {
+  background-image: linear-gradient(to bottom right, #3e5975, #351447);
+  padding: 15px 10px 15px 10px;
+  width: 250px;
+  color: lavender;
+  font-family: 'Arial';
+  border-radius: 20px;
+  border: solid 2px white;
+  height: 270px;
+  overflow-y: auto;
+}
+
+#lastInsContainer h2 {
+  margin: 0;
+  padding: 0 0 30px 0;
+}
+
+#lastInsContainer p {
+  margin: 0;
+}
+
+#lastInsContainer div {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+#insLogo {
+  height: 80px;
+  width: 80px;
+}
+
+/*FOR GARENA INSTRUCTION*/
+
+#garenaIns { 
+  background-image: linear-gradient(to top, #8EACCD, white);;
+  padding: 0 20px 20px 20px;
+  width: 250px;
+  color: #351447;
+  font-family: 'Arial';
+  border-radius: 20px;
+  border: solid 2px white;
+  overflow-y: auto;
+  height: 80vh;
+}
+
+/*FOR ERROR PROMPT */
+
+#errorBox {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 3em 1em 3em;
+  background-color: rgba(200, 0, 0, 0.4);
+  color: lavender;
+  font-size: 12px;
+  font-family: 'Courier New';
+  font-weight: bold;
+}
+
+#errorBox p {
+  margin: 0;
+}
+
+#errorBox h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* FOR ANIMATION */
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-300%) translateY(30%) skewX(20deg);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(0px) translateY(30%);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(10%) translateY(30%) skewX(-12deg);
+  }
+  40% {
+    transform: translateX(10%) translateY(30%) skewX(-12deg);
+  }
+  45% {
+    transform: translateX(0%) translateY(30%) skewX(5deg)
+  }
+  50% {
+    transform: translateX(0%) translateY(30%) skewX(0deg)
+  }
+  75% {
+    transform: translateX(0%) translateY(30%) skewX(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300%) translateY(30%);
+    opacity: 0;
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(500%);
+    opacity: 0;
+    font-size: 5px;
+  }
+  15% {
+    transform: translateY(500%);
+    opacity: 0;
+    font-size: 5px;
+  }
+  33% {
+    transform: translateY(-20%);
+    opacity: 1;
+    font-size: 14px;
+  }
+  70% {
+    transform: translateY(-40%);
+    opacity: 1;
+    font-size: 14px;
+  }
+  80% {
+    transform: translateY(500%);
+    opacity: 0;
+    font-size: 5px;
+  }
+  100% {
+    transform: translateY(500%);
+    opacity: 0;
+    font-size: 5px;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.animationPulse {
+  animation: pulse 3s linear infinite;
+}
+
+.animationSlide {
+  animation: slide 2.5s ease-in-out;
+}
+
+.animationPop {
+  animation: hover 2.5s ease-in-out;
+}
+
+.animationFade {
+  animation: fade 2.5s ease-in-out;
+}
+
+.animationFadeUp {
+  animation: fade-up 0.15s ease-in;
+}

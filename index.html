@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Astheriyah's Cart</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+ <div id="divLogoHead">
+  <img id="logo" src="/assets/Ast logo.png">
+  <h1 id="pageTitle">Astheriyah's Cart</h1>
+ </div>
+  
+ <!-- TERMS AND CONDITIONS -->
+ 
+ <div id ="tacParent" class="">
+ <div id = "tac" class ="tac">
+   <h1>Terms and Conditions</h1>
+   <hr>
+   <div id = "terms">
+   <ul>
+     <li>Always ask for availability of game credits. </li>
+     <li>Payment first policy. </li>
+     <li>Payment options are: GCASH, MAYA, and 7-11 cash-in. </li>
+     <li>No to rush orders, your order could be fulfilled within 5 - 30 mins. depending on the stock availability and queue.</li>
+     <li>No refund once payment is settled and order is currently on process.</li>
+     <li>Double check your user info before sending. </li>
+     <li>For defective pins, it is subjected to investigation lasting up to 14 days. </li>
+     <li>Legally top up via trusted third party sites.</li>
+     <li>Safe, no ban. thus, we won't be accountable if anything happens to your account.</li>
+     <li>Prices may change without prior notice.</li>
+     </div>
+     <button id="tacButton" onclick ="hide('#tacParent');">Agree and Accept</button>
+   </ul>
+ </div>
+ </div>
+  
+<p id="welcome">Welcome to Astheriyah's cart! we offer discounted credits of various games!</p>
+
+<a href="javascript:show('#tacParent')">Terms and Conditions</a>
+
+<!--navigation buttons-->
+ <div class="navigationTab">
+  <button class="navButton" id="ordersButton" onclick="pressOrders(); toggled(); happen();">Orders</button>
+  
+  <button class="navButton toggled" id="homeButton" onclick="pressHome(); toggled(); happen();">Home</button>
+  
+  <button class="navButton" id="reviewsButton" onclick="pressReviews(); toggled(); happen();">Reviews</button>
+ </div>
+  
+ <!-- HOME PAGE -->
+ 
+ <div id="divHome" class="">
+   
+ <h2 id="question"><strong>What are you looking for?</strong></h2>
+ 
+ <div id="categPanel">
+ 
+ <div class="mainDivButton">
+   <div class="categoryInline" id="divCurrency">
+    <button onclick="show('#gamesSelectDiv'); hide('#categPanel'); scrollToPart('#gamesSelectDiv')" class="categoryButton" id="buttonCurrency"><img src="/assets/currency.png"</button>
+    <p>Game Currencies</p>
+   </div>
+   
+   <div class="categoryInline" id="divBp">
+    <button onclick="show('#bpSelectDiv'); hide('#categPanel'); scrollToPart('#bpSelectDiv')" class="categoryButton" id="buttonBp"><img src="/assets/bp.png"></button>
+    <p>Battle Pass</p>
+   </div>
+  
+  <div class="categoryInline" id="divSteam">
+   <button class="categoryButton" id="buttonSteam"><img src="/assets/steam.png" onclick="createTable('steamProducts', steamArray, 'steamArray'); show('#steamListing'); hide('#categPanel'); scrollToPart('#question')"></button>
+   <p>Steam Wallet</p>
+  </div>
+  
+  <div class="categoryInline" id="divData">
+   <button onclick="show('#networkSelectDiv'); hide('#categPanel'); scrollToPart('#networkSelectDiv')" class="categoryButton" id="buttonData"><img src="/assets/data.png"></button>
+   <p>Data</p>
+  </div>
+  
+ </div>
+ </div>
+  
+<!--Games Select-->
+<div id="gamesSelectDiv" class="isHidden">
+  <div id="selectYourGame">
+    <hr>
+   <h1>Select your Game</h1>
+  </div>
+  
+ <div id="gamePanel">
+   
+   <div>
+     <button onclick="createTable('codmCurrency', codmCurArray, 'codmCurArray'); show('#codmCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/cod.jpeg">Call of Duty: Mobile</button>
+   </div>
+   <div>
+     <button onclick="createTable('wrCurrency', wrCurArray, 'wrCurArray'); show('#wrCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/wildrift.jpeg">Wild Rift</button>
+   </div>
+   <div>
+     <button onclick="createTable('giCurrency', giCurArray, 'giCurArray'); show('#giCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/genshin.jpeg">Genshin Impact</button>
+   </div>
+   <div>
+     <button onclick="createTable('pubgCurrency', pubgCurArray, 'pubgCurArray'); show('#pubgCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/pubg.jpeg">PUBG Mobile</button>
+   </div>
+   <div>
+     <button onclick="createTable('mlCurrency', mlCurArray, 'mlCurArray'); show('#mlCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/ml.jpeg">Mobile Legends</button>
+   </div>
+   <div>
+     <button onclick="createTable('smCurrency', smCurArray, 'smCurArray'); show('#smCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/sausageman.jpeg">Sausage Man</button>
+   </div>
+   <div>
+     <button onclick="createTable('flCurrency', flCurArray, 'flCurArray'); show('#flCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/farlight.jpeg">Farlight 84</button>
+   </div>
+   <div>
+     <button onclick="createTable('valCurrency', valCurArray, 'valCurArray'); show('#valCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/val.png">Valorant</button>
+   </div>
+   <div>
+     <button onclick="createTable('lolCurrency', lolCurArray, 'lolCurArray'); show('#lolCListing'); hide('#gamesSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/game icons/lol.jpg">League of Legends</button>
+   </div>
+ </div>
+  <button class="navButton" onclick="hide('#gamesSelectDiv'); show('#categPanel'); scrollToPart('#divLogoHead')">Back</button>
+  <hr>
+ </div>
+ 
+ <!--Network Select-->
+<div id="networkSelectDiv" class="isHidden">
+  <div id="selectYourNetwork">
+    <hr>
+   <h1>Select your Network</h1>
+  </div>
+  
+ <div id="networkPanel">
+   
+   <div>
+     <button onclick="createTable('smartProducts', smartArray, 'smartArray'); show('#smartListing'); hide('#networkSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/other Icons/smart.png">Smart</button>
+   </div>
+   
+    <div>
+     <button onclick="createTable('tntProducts', tntArray, 'tntArray'); show('#tntListing'); hide('#networkSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/other Icons/tnt.png">Talk 'n Text</button>
+   </div>
+   
+   <div>
+     <button onclick="createTable('globeProducts', globeArray, 'globeArray'); show('#globeListing'); hide('#networkSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/other Icons/globe.png">Globe</button>
+   </div>
+   
+   <div>
+     <button onclick="createTable('tmProducts', tmArray, 'tmArray'); show('#tmListing'); hide('#networkSelectDiv'); scrollToPart('#question')"><img class="imagePanel" src="/assets/other Icons/TM.png">TM</button>
+   </div>
+   
+  </div>
+   <button class="navButton" onclick="hide('#networkSelectDiv'); show('#categPanel'); scrollToPart('#divLogoHead')">Back</button>
+  <hr>
+ </div>
+ 
+ <!-- BATTLE PASS -->
+ 
+<div id="bpSelectDiv" class="isHidden">
+  <div id="selectYourBp">
+    <hr>
+   <h1>Select your Game</h1>
+  </div>
+  
+ <div id="bpPanel">
+   
+   <div class="bpInfo">
+    <div>
+     <image class="imagePanel" src="/assets/game icons/cod.jpeg">
+    </div>
+    <div class="subInfoDiv">
+     <h3>Call of Duty: Mobile</h3>
+     <p>Regular Battle Pass</p>
+     <button onclick="selectedArray(bpArray); addToCart(0); popUpAdd(); addCounter(); editReset(); toggleCartReceipt('cart');">160</button>
+     <p>Normal Battle Pass</p>
+     <button onclick="selectedArray(bpArray); addToCart(1); popUpAdd(); addCounter(); editReset(); toggleCartReceipt('cart');">193</button>
+     <p>Premium Battle Pass</p>
+     <button onclick="selectedArray(bpArray); addToCart(2); popUpAdd(); addCounter(); editReset(); toggleCartReceipt('cart');">290</button>
+    </div>
+   </div>
+   
+   <div class="bpInfo">
+    <div>
+      <image class="imagePanel" src="/assets/game icons/val.png">
+    </div>
+    <div class="subInfoDiv">
+      <h3>Valorant</h3>
+      <p>Battle Pass</p>
+      <button onclick="selectedArray(bpArray); addToCart(3); popUpAdd(); addCounter(); editReset(); toggleCartReceipt('cart');">360</button>
+    </div>
+   </div>
+     
+   <div class="bpInfo">
+    <div>
+      <image class="imagePanel" src="/assets/game icons/wildrift.jpeg">
+    </div>
+    <div class="subInfoDiv">
+      <h3>Wild Rift</h3>
+      <p>Normal Pass</p>
+      <button onclick="selectedArray(bpArray); addToCart(4); popUpAdd(); addCounter(); editReset(); toggleCartReceipt('cart');">270</button>
+      <p>Elite Pass</p>
+      <button onclick="selectedArray(bpArray); addToCart(5); popUpAdd(); addCounter(); editReset(); toggleCartReceipt('cart');">450</button>
+    </div>
+   </div>
+  
+   <div class="bpInfo">
+    <div>
+      <image class="imagePanel" src="/assets/game icons/farlight.jpeg">
+    </div>
+    <div class="subInfoDiv">
+      <h3>Farlight 84</h3>
+      <p>Battle Pass</p>
+      <button onclick="selectedArray(bpArray); addToCart(6); popUpAdd(); addCounter(); editReset(); toggleCartReceipt('cart');">209</button>
+    </div>
+   </div>
+   
+  </div>
+   <button class="navButton" onclick="hide('#bpSelectDiv'); show('#categPanel'); scrollToPart('#divLogoHead')">Back</button>
+  <hr>
+ </div>
+ 
+ <!--PROMPT-->
+ 
+ <div id="cartPromptParent" class="isHidden">
+  <div id="cartPrompt"> <!--Prompt-->
+   <p id="popUpText" class="">Item added to <br> Cart!</p>
+   <img id="popUpLogo" class="" src="/assets/Ast logo.png">
+  </div>
+ </div>
+ 
+ <!--GAME CURRENCY LIST-->
+ <div>
+   <div id="codmCListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+     <table>
+       <tr>
+         <th class="listProduct">Product</th>
+         <th class="listPrice">Price</th>
+       </tr>
+       <tbody id="codmCurrency">
+       </tbody>
+     </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#codmCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+   </div>
+   
+   <div id="wrCListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+     <table>
+       <tr>
+         <th class="listProduct">Product</th>
+         <th class="listPrice">Price</th>
+       </tr>
+       <tbody id="wrCurrency">
+       </tbody>
+     </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#wrCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+   </div>
+   
+   <div id="giCListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+       <table>
+         <tr>
+           <th class="listProduct">Product</th>
+           <th class="listPrice">Price</th>
+         </tr>
+         <tbody id="giCurrency">
+         </tbody>
+       </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#giCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+   </div>
+   
+   <div id="pubgCListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+       <table>
+         <tr>
+           <th class="listProduct">Product</th>
+           <th class="listPrice">Price</th>
+         </tr>
+         <tbody id="pubgCurrency">
+         </tbody>
+       </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#pubgCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+   </div>
+   
+   <div id="mlCListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+       <table>
+         <tr>
+           <th class="listProduct">Product</th>
+           <th class="listPrice">Price</th>
+         </tr>
+         <tbody id="mlCurrency">
+         </tbody>
+       </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#mlCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+   </div>
+   
+   <div id="smCListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+       <table>
+         <tr>
+           <th class="listProduct">Product</th>
+           <th class="listPrice">Price</th>
+         </tr>
+         <tbody id="smCurrency">
+         </tbody>
+       </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#smCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+   </div>
+   
+   <div id="flCListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+       <table>
+         <tr>
+           <th class="listProduct">Product</th>
+           <th class="listPrice">Price</th>
+         </tr>
+         <tbody id="flCurrency">
+         </tbody>
+       </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#flCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+   </div>
+   
+    <div id="valCListing" class="listingDesign isHidden">
+      <p class="animationPulse">Tap to Add to Cart!</p>
+      <div class="listingTable">
+        <table>
+          <tr>
+            <th class="listProduct">Product</th>
+            <th class="listPrice">Price</th>
+          </tr>
+          <tbody id="valCurrency">
+          </tbody>
+        </table>
+      </div>
+      <em class="hint">*scroll to see more products!*</em>
+      <button class="listingBackBtn" onclick="hide('#valCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+    </div>
+    
+     <div id="lolCListing" class="listingDesign isHidden">
+       <p class="animationPulse">Tap to Add to Cart!</p>
+       <div class="listingTable">
+         <table>
+           <tr>
+             <th class="listProduct">Product</th>
+             <th class="listPrice">Price</th>
+           </tr>
+           <tbody id="lolCurrency">
+           </tbody>
+         </table>
+       </div>
+       <em class="hint">*scroll to see more products!*</em>
+       <button class="listingBackBtn" onclick="hide('#lolCListing'); show('#gamesSelectDiv'); scrollToPart('#gamesSelectDiv')">Back</button>
+     </div>
+ </div>
+ 
+ <!-- STEAM LIST -->
+ 
+ <div id="steamListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+     <table>
+       <tr>
+         <th class="listProduct">Product</th>
+         <th class="listPrice">Price</th>
+       </tr>
+       <tbody id="steamProducts">
+       </tbody>
+     </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#steamListing'); show('#categPanel'); scrollToPart('#divLogoHead')">Back</button>
+   </div>
+   
+  <!-- DATA LIST -->
+ 
+ <div id="smartListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+     <table>
+       <tr>
+         <th class="listProduct">Product</th>
+         <th class="listPrice">Price</th>
+       </tr>
+       <tbody id="smartProducts">
+       </tbody>
+     </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#smartListing'); show('#networkSelectDiv'); scrollToPart('#networkSelectDiv')">Back</button>
+   </div>
+ 
+  <div id="tntListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+     <table>
+       <tr>
+         <th class="listProduct">Product</th>
+         <th class="listPrice">Price</th>
+       </tr>
+       <tbody id="tntProducts">
+       </tbody>
+     </table>
+     </div>
+     <em class="hint">*scroll to see more products!*</em>
+     <button class="listingBackBtn" onclick="hide('#tntListing'); show('#networkSelectDiv'); scrollToPart('#networkSelectDiv')">Back</button>
+   </div>
+   
+  <div id="globeListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+     <table>
+       <tr>
+         <th class="listProduct">Product</th>
+         <th class="listPrice">Price</th>
+       </tr>
+       <tbody id="globeProducts">
+       </tbody>
+     </table>
+     </div>
+     <button class="listingBackBtn" onclick="hide('#globeListing'); show('#networkSelectDiv'); scrollToPart('#networkSelectDiv')">Back</button>
+   </div>
+   
+  <div id="tmListing" class="listingDesign isHidden">
+     <p class="animationPulse">Tap to Add to Cart!</p>
+     <div class="listingTable">
+     <table>
+       <tr>
+         <th class="listProduct">Product</th>
+         <th class="listPrice">Price</th>
+       </tr>
+       <tbody id="tmProducts">
+       </tbody>
+     </table>
+     </div>
+     <button class="listingBackBtn" onclick="hide('#tmListing'); show('#networkSelectDiv'); scrollToPart('#networkSelectDiv')">Back</button>
+   </div>
+   
+ </div> <!--HomePage Closing Div-->
+
+<!--ORDERS PAGE-->
+
+<div id="divOrders" class="isHidden">
+  
+  <h1>"ORDERS" PAGE COMING SOON</h1>
+  
+</div>
+
+<!--REVIEWS PAGE-->
+
+<div id="divReviews" class="isHidden">
+  
+  <h1>"REVIEWS" PAGE COMING SOON</h1>
+  
+</div>
+
+<hr class="dash">
+
+ <div id="myCart">
+   <h1 id="cartOrReceipt">
+    My Cart 🛒
+   </h1>
+   <p id="orderID" class="isHidden"></p>
+   <hr style="border: dotted 2px">
+   <div class="flexTable">
+     <table>
+       <tr>
+         <th id="productCell">Item</th>
+         <th id="priceCell">Price</th>
+         <th id="removeCell" class="isHidden">X</th>
+       </tr>
+       <tbody id="cartContent">
+         
+       </tbody>
+     </table>
+   </div>
+   <hr style="border: dotted 2px">
+   <div id="detailsPart" class="isHidden">
+     
+   </div>
+ </div>
+    <div id="cartButtons" class="">
+     <button id="btnForEdit" class="navButton" onclick="toggleEdit()">Edit Cart</button>
+     <button class="navButton" onclick="isCartLoaded(); addFadeUp('formsContainer')">Proceed</button>
+    </div>
+    <div id="receiptButtons" class="isHidden">
+     <button id="btnForPayNow" class="navButton" onclick="show('#qrParent'); whichPayment();">Pay Now!</button>
+     <button class="navButton" onclick="toggleCartReceipt('cart');">View Cart</button>
+    </div>
+ <!-- FORMS DIV -->
+ 
+  <div id="forms" class="parent isHidden">
+   <div id="formsContainer">
+     <div id="containerHeader">
+      <h2 class="formsHeader">Customer Details</h2>
+      <p class="formsHeader">Customer's Name</p>
+      <input id="customerName" placeholder="(Optional)" type="text">
+     <hr style="border: 1px dotted">
+   </div>
+   <div id="formBody">
+     
+    <div id="codmForm" class="productForm isHidden">
+      <p>Call of Duty: Mobile</p>
+      <a href="javascript: show('#garenaInsParent')">Convert Garena Shells to CODM Points!</a>
+    </div>
+    
+    <div id="wrForm" class="productForm isHidden">
+      <p>Wild Rift</p>
+      <input id="wrInput" placeholder="Riot ID #Tagline">
+    </div>
+    
+    <div id="giForm" class="productForm isHidden">
+      <p>Genshin Impact</p>
+      <input id="giInput" placeholder="User ID">
+      <select id="giInput2">
+        <option value="" disabled selected>Select Server</option>
+        <option value="Europe">Europe</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="SAR (TW/HK/MO)">SAR (TW/HK/MO)</option>
+        <option value="China">China</option>
+      </select>
+    </div>
+    
+    <div id="pubgForm" class="productForm isHidden">
+      <p>PUBG MOBILE</p>
+      <input id="pubgInput" placeholder="Player ID">
+      <input id="pubgInput2" placeholder="Nickname">
+    </div>
+    
+    <div id="mlForm" class="productForm isHidden">
+      <p>MOBILE LEGENDS</p>
+      <input id="mlInput" placeholder="User ID">
+      <input id="mlInput2" placeholder="Server">
+    </div>
+    
+    <div id="smForm" class="productForm isHidden">
+      <p>SAUSAGE MAN</p>
+      <input id="smInput" placeholder="Character ID">
+    </div>
+    
+    <div id="flForm" class="productForm isHidden">
+      <p>FARLIGHT 84</p>
+      <input id="flInput" placeholder="User ID">
+    </div>
+    
+    <div id="valForm" class="productForm isHidden">
+      <p>VALORANT</p>
+      <input id="valInput" placeholder="Riot ID #Tagline">
+    </div>
+    
+    <div id="lolForm" class="productForm isHidden">
+      <p>LEAGUE OF LEGENDS</p>
+      <input id="lolInput" placeholder="Riot ID #Tagline">
+    </div>
+    
+    <div id="smartForm" class="productForm isHidden">
+      <p>SMART</p>
+      <input id="smartInput" placeholder="Smart Mobile Number">
+    </div>
+    
+    <div id="tntForm" class="productForm isHidden">
+      <p>TALK 'N TEXT</p>
+      <input id="tntInput" placeholder="TnT Mobile Number">
+    </div>
+    
+    <div id="globeForm" class="productForm isHidden">
+      <p>GLOBE</p>
+      <input id="globeInput" placeholder="Globe Mobile Number">
+    </div>
+    
+    <div id="tmForm" class="productForm isHidden">
+      <p>TM</p>
+      <input id="tmInput" placeholder="TM Mobile Number">
+    </div>
+    
+    <div id="payment" class="productForm">
+      <p>PAYMENT METHOD</p>
+      <select id="paymentMethod">
+        <option value="" disabled selected>Choose Method</option>
+        <option value="GCash">GCash</option>
+        <option value="Maya">Maya</option>
+      </select>
+    </div>
+    
+    </div>
+    <button class="navButton" onclick="isInputFilled(); addFadeUp('tac')">View Receipt</button>
+    <button class="navButton" onclick="hide('#forms')">Cancel</button>
+   </div>
+  </div>
+  
+  <!-- GARENA INSTRUCTIONS -->
+  
+  <div id="garenaInsParent" class="parent isHidden">
+    <div id="garenaIns">
+      <h4>Requirements</h4>
+      
+        FB & Garena account bind only.
+        Not working for Apple ID bind.
+      
+      
+      <h4>How to convert Garena Shells into CODM Points:</h4>
+      -Go to <a style="color: blue" href="https://shop.garena.ph/app">shop.garena.ph</a><br>
+      -Click Call of Duty and login your Garena or Facebook account binded.<br>
+      -Choose Garena Prepaid Card (Garena PPC)<br>
+      -Encode the Card Password or PIN. <br>
+      -Click Confirm<br>
+      <h4><em>Always remember:</em></h4>
+      Shell Top-Up ❌<br>
+      COD > Garena Shells ❌<br>
+      COD > Garena PPC ✅<br>
+      Because in COD > Garena PPC, you can get the most CP amount.<br>
+      <p>Thanks!</p>
+      <button onclick="hide('#garenaInsParent')">Close</button>
+    </div>
+  </div>
+  
+  <!-- LAST INSTRUCTION-->
+  
+  <div id="lastIns" class="isHidden">
+    <div id="lastInsContainer">
+      <p>Thanks for Shopping here at</p>
+      <image id="insLogo" src="/assets/Ast logo.png">
+      <h2>Astheriyah's Cart!</h2>
+      <p>Please send your <em><strong>Proof of Payment</strong></em> along with your <em><strong>Astheriyah Order Receipt</strong></em> to our </p>
+      <div>
+      <p>Telegram: @xsthxrxyxh</p>
+      <p><em>or alternatively:</em></p>
+      <p>Facebook: <a href="https://www.facebook.com/ottoparx">Astheriyah Hesruche</a></p>
+      </div>
+      <button class="navButton" onclick="hide('#lastIns');">Got it!</button>
+    </div>
+  </div>
+  
+  <!-- ERROR MESSAGE -->
+  
+  <div id="errorParent" class="parent isHidden">
+    <div id="errorBox">
+      
+      
+    </div>
+  </div>
+  
+     <!-- FOR QR PAYMENT -->
+   
+   <div id="qrParent" class="parent isHidden">
+     <div id="qrChild" class="qrChild">
+     <div id="forGcash" class="">
+       <image class="imagePanel" src="/assets/gcashQR.jpg">
+       <p>Astheriyah's <span class="gCash">GCash</span></p>
+       <p>Scan now to Pay!</p>
+     </div>
+     <div id="forMaya" class="isHidden">
+       <image class="imagePanel" src="/assets/mayaQR.jpg">
+       <p>Astheriyah's <span class="maya">Maya</span></p>
+       <p>Scan now to Pay!</p>
+     </div>
+      <p id="afterPayment"><em>After your payment, please save your <strong>Astheriyah's Receipt</strong> here:</em></p>
+      <button onclick="hide('#qrParent'); saveAsImage(); show('#lastIns'); addFadeUp('lastIns')">Save Receipt</button>
+     </div>
+   </div>
+ 
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
