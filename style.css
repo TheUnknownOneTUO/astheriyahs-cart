@@ -277,7 +277,7 @@ th {
 
 /*Background Images*/
 #codmCListing {
-  background-image: url(assets/backgrounds/codmBackground1.png);
+  background-image: url("assets/backgrounds/codmBackground1.png");
 }
 #wrCListing {
   background-image: url("assets/backgrounds/wrBackground1.png")
